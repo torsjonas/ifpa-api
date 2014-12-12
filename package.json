@@ -19,5 +19,8 @@
   "dependencies": {
     "q": "^1.1.2",
     "request": "^2.51.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.4.28"
   }
 }
