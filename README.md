@@ -17,6 +17,7 @@ var IfpaApi = require('ifpa-api');
 // Construct an instance of the IfpaApi class providing your API key as a parameter.
 // You can get an API key by following the instructions 
 // on http://www.ifpapinball.com/api/documentation/.
+
 var ifpaApiInstance = new IfpaApi('<your_key');
 
 ifpaApiInstance.getCalendarEvents('Sweden').then(
