@@ -1,7 +1,7 @@
 ifpa-api
 ========
 
-A node wrapper class for the International Flipper Pinball Association (IFPA) API.
+A node wrapper class for the International Flipper Pinball Association (IFPA) API. Basically a translation of the PHP wrapper heyrocker/IfpaApi.
 
 Installation
 ============
