@@ -1,7 +1,7 @@
 ifpa-api
 ========
 
-A node wrapper class for the International Flipper Pinball Association (IFPA) API.
+A node wrapper class for the International Flipper Pinball Association (IFPA) API. The wrapper method calls return q deferreds.
 
 Installation
 ============
@@ -18,7 +18,7 @@ Usage
     // on http://www.ifpapinball.com/api/documentation/.
 		var ifpaApiInstance = new IfpaApi('<your_key');
 		
-		ifpaApiInstance.getCalendarEvents().then(
+		ifpaApiInstance.getCalendarEvents('Sweden').then(
 		  function(data){
 		    console.log(data);
 		  },
