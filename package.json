@@ -1,0 +1,23 @@
+{
+  "name": "ifpaapi",
+  "version": "0.1.0",
+  "description": "International Flipper Pinball Association (IFPA) API",
+  "main": "ifpa-api.js",
+  "author": "Jonas Johansson",
+  "license": "Unlicense",
+   "tags": [
+    "api",
+    "ifpa",
+    "node",
+    "wrapper",
+    "ifpa-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/torsjonas/ifpa-api.git"
+  },
+  "dependencies": {
+    "q": "^1.1.2",
+    "request": "^2.51.0"
+  }
+}
