@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "International Flipper Pinball Association (IFPA) API",
   "main": "ifpa-api.js",
-  "author": "Jonas Johansson",
+  "author": "Jonas Johansson <jojonas@gmail.com>",
   "license": "Unlicense",
    "tags": [
     "api",
