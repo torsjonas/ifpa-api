@@ -1,8 +1,8 @@
 var request = require('request');
 var Q = require('q');
 
-var ifpaApi = function(API_KEY){
-	var apiKey = API_KEY;
+var ifpaApi = function(apiKey){
+	apiKey = apiKey || '';
 	var baseUrl = 'https://api.ifpapinball.com/v1/';
 
 	var getIfpaError = function(httpStatusCode){
@@ -53,12 +53,6 @@ var ifpaApi = function(API_KEY){
 		return deferred.promise;
 	};
 
-	/**
-	 * Search players by name or email.
-	 * @param  {string} param The name or email to search
-	 * @param  {string} [type] Whether this is a name search or an email search
-	 * @return {object} Returns a Q deferred promise.
-	 */
 	var searchPlayers = function(param, type) {
 	    // The player search function only works with email OR name searches, not both.
 	    var fragment = '&q=';
@@ -77,7 +71,7 @@ var ifpaApi = function(API_KEY){
   	 * results will be returned. Note that the state field for countries outside of the US and Canada 
   	 * doesn't really work very well.
   	 * @param  {[boolean]} past If set to true, return past events rather than current events. Defaults
-   *   to false. NOTE: Historical result sets can be very large.
+  	 * to false. NOTE: Historical result sets can be very large.
   	 * @return {object} Returns a Q deferred promise.
   	 */
 	this.getCalendarEvents = function(country, state, past){
