@@ -1,5 +1,5 @@
 {
-  "name": "ifpaapi",
+  "name": "ifpa-api",
   "version": "0.1.0",
   "description": "International Flipper Pinball Association (IFPA) API",
   "main": "ifpa-api.js",
