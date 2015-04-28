@@ -77,7 +77,7 @@ var ifpaApi = function(API_KEY){
   	 * results will be returned. Note that the state field for countries outside of the US and Canada 
   	 * doesn't really work very well.
   	 * @param  {[boolean]} past If set to true, return past events rather than current events. Defaults
-   *   to false. NOTE: Historical result sets can be very large.
+  	 * to false. NOTE: Historical result sets can be very large.
   	 * @return {object} Returns a Q deferred promise.
   	 */
 	this.getCalendarEvents = function(country, state, past){
