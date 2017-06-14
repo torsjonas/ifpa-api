@@ -1,7 +1,7 @@
 ifpa-api
 ========
 
-A node wrapper class for the International Flipper Pinball Association (IFPA) API. Basically a translation of the PHP wrapper heyrocker/IfpaApi.
+A Promise based node client for the International Flipper Pinball Association (IFPA) API.
 
 Installation
 ============
@@ -14,15 +14,13 @@ Usage
 Construct an instance of the IfpaApi class providing your API key as a parameter. You can get an API key by following the instructions on http://www.ifpapinball.com/api/documentation/
 
 ```javascript
-var IfpaApi = require('ifpa-api');
-var ifpaApiInstance = new IfpaApi('<your_key');
+const IfpaApi = require('ifpa-api');
+const ifpaApi = new IfpaApi('<your_key');
 
-ifpaApiInstance.getCalendarEvents('Sweden').then(
-  function(data){
-    console.log(data);
-  },
-  function(err){
-    console.log(err);
-  }
-);
+ifpaApi.getActiveCalendarEvents('Sweden')
+  .then(result => console.log(JSON.stringify(result)));
+
+ifpaApi.getPlayerInformation(20000)
+  .then(result => console.log(JSON.stringify(result)));
+
 ```
