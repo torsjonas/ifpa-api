@@ -11,7 +11,7 @@ npm install ifpa-api
 Usage
 =====
 
-Construct an instance of the IfpaApi class providing your API key as a parameter. You can get an API key by following the instructions on http://www.ifpapinball.com/api/documentation/
+Create an instance of the IfpaApi class, providing your API key as a parameter. You can get an API key by following the instructions on http://www.ifpapinball.com/api/documentation/
 
 ```javascript
 const IfpaApi = require('ifpa-api');
@@ -22,5 +22,4 @@ ifpaApi.getActiveCalendarEvents('Sweden')
 
 ifpaApi.getPlayerInformation(20000)
   .then(result => console.log(JSON.stringify(result)));
-
 ```

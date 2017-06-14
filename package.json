@@ -13,7 +13,11 @@
     "ifpa-api"
   ],
   "scripts": {
-    "test": "semistandard && mocha ./test/**/*.spec.js"
+    "test": "npm run lint && mocha ./test/**/*.spec.js",
+    "test-only": "mocha ./test/**/*.spec.js",
+    "lint": "npm run prettier && npm run semistandard",
+    "prettier": "prettier --list-different --write '{{src,test}/**/*.js}'",
+    "semistandard": "semistandard --fix 'src/util/**/*.js' 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,7 @@
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
     "nock": "^9.0.13",
+    "prettier": "^1.4.4",
     "semistandard": "^11.0.0"
   }
 }

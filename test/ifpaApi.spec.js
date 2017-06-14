@@ -2,7 +2,7 @@
 
 const assert = require('chai').assert;
 const nock = require('nock');
-const IfpaApi = require('../ifpaApi');
+const IfpaApi = require('../src/ifpaApi');
 
 const apiKey = 'testKey';
 const ifpaApi = new IfpaApi(apiKey);
