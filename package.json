@@ -1,26 +1,37 @@
 {
   "name": "ifpa-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "International Flipper Pinball Association (IFPA) API",
   "main": "ifpa-api.js",
   "author": "Jonas Johansson <jojonas@gmail.com>",
   "license": "Unlicense",
-   "tags": [
+  "tags": [
     "api",
     "ifpa",
     "node",
     "wrapper",
     "ifpa-api"
   ],
+  "scripts": {
+    "test": "npm run lint && mocha ./test/**/*.spec.js",
+    "test-only": "mocha ./test/**/*.spec.js",
+    "lint": "npm run prettier && npm run semistandard",
+    "prettier": "prettier --list-different --write '{{src,test}/**/*.js}'",
+    "semistandard": "semistandard --fix 'src/**/*.js' 'test/**/*.js'"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/torsjonas/ifpa-api.git"
   },
   "dependencies": {
-    "q": "^1.1.2",
-    "request": "^2.51.0"
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
   },
   "devDependencies": {
-    "jasmine-node": "^1.4.28"
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "nock": "^9.0.13",
+    "prettier": "^1.4.4",
+    "semistandard": "^11.0.0"
   }
 }
